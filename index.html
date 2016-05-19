@@ -18,6 +18,7 @@
             line-height: 60px;
             text-transform: uppercase;
             font-weight: bold;
+
         }
         .megacolor {
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+20,2989d8+50,1e5799+80&0+0,0.8+7,0.8+7,1+19,1+81,0.8+94,0+100 */
@@ -37,12 +38,16 @@
             color: white;
         }
 
-        .poulet.rouge {
+        .rouge {
             background-color: red;
         }
 
-        .poulet.bleu {
+        .bleu {
             background-color: blue;
+        }
+
+        .vert{
+                background-color: green;
         }
 
         .image-tourne {
@@ -104,7 +109,7 @@
                     Nos poulets
                 </a>
                 <a class="list-group-item poulet rouge">Poulets rouges</a>
-                <a class="list-group-item bleu">Poulets bleus</a>
+                <a class="list-group-item poulet bleu">Poulets bleus</a>
                 <a class="list-group-item poulet vert">Poulets verts</a>
                 <a class="list-group-item disabled">
                     Notre société
@@ -142,6 +147,7 @@
     var boutonPouletDuMois = document.querySelector('.btn-poulet-du-mois');
     var imagePouletDuMois = document.querySelector('.img-poulet-du-mois');
     boutonPouletDuMois.addEventListener('click',function(){
+                imagePouletDuMois.classList.remove('image-invisible');
     });
 
     // décompte du temps passé sur la page
@@ -151,7 +157,7 @@
     setInterval(function(){
         totalSecondes++;
         time.innerText = totalSecondes;
-    },250);
+    },999);
 </script>
 
 </body>
